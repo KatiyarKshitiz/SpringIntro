@@ -8,4 +8,9 @@ public class HelloRestController {
     public String sayhello(){
         return "Hello From BridgeLabz";
     }
+
+    @GetMapping("/hello/query")
+    public String sayHello(@RequestParam(value = "name") String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
